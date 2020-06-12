@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="map">
+      <div class="container">
+        <form class="form">
+          <div class="form__inner">
+            <div class="form-row form__path">
+              <div class="input-box">
+                <input
+                  class="form__path-input"
+                  id="from"
+                  type="text"
+                  placeholder="Откуда"
+                  autocomplete="off"
+                />
+                <span class="path-swap__close"></span>
+                <span class="input-close"></span>
+              </div>
+              <div class="path-swap">
+                <button class="path-swap__btn" type="button"></button>
+              </div>
+              <div class="input-box">
+                <input
+                  class="form__path-input"
+                  id="to"
+                  type="text"
+                  placeholder="Куда"
+                />
+                <span class="input-close"></span>
+              </div>
+            </div>
+            <div class="form-row form__info">
+              <div class="select-wrapper">
+                <div class="custom-select time-select">
+                  <div class="custom-select__trigger">
+                    <span>На ближайшее время</span>
+                    <div class="arrow"></div>
+                  </div>
+                  <div class="custom-options">
+                    <span
+                      class="custom-option selected"
+                      data-value="На ближайшее время"
+                      >На ближайшее время</span
+                    >
+                    <span class="custom-option" data-value="Через 10 минут"
+                      >Через 10 минут</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="select-wrapper disabled">
+                <div class="custom-select requirements-select">
+                  <div class="custom-select__trigger">
+                    <div class="car-icon"></div>
+                    <span>Требования</span>
+                    <div class="arrow"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="input-box">
+                <input
+                  class="form__info-input"
+                  type="tel"
+                  placeholder="Телефон"
+                  onkeypress="return isNumberKey(event)"
+                />
+                <span class="input-close"></span>
+              </div>
+            </div>
+            <div class="form-row form__preference">
+              <a href="#" class="form__preference-link">Тарифы</a>
+              <button class="form__preference-btn">Комментарий к заказу</button>
+              <div class="preference-input">
+                <input
+                  class="preference-input__item"
+                  type="text"
+                  data-comment
+                />
+              </div>
+            </div>
+          </div>
+          <div class="form__submit">
+            <div class="form__inner form__submit-inner">
+              <div class="select-wrapper">
+                <div class="custom-select submit-select">
+                  <div class="custom-select__trigger">
+                    <span>Економ від 35 грн</span>
+                    <div class="arrow"></div>
+                  </div>
+                  <div class="custom-options">
+                    <span
+                      class="custom-option selected"
+                      data-value="На ближайшее время"
+                      >Економ від 35 грн</span
+                    >
+                    <span class="custom-option" data-value="Через 10 минут"
+                      >Business від 35 грн</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <button class="form__submit-btn" type="submit">
+                Вызвать такси
+              </button>
+              <div class="form__payment">
+                Для расчёта стоимости поездки заполните поля «Откуда» и «Куда».
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="js/main.js" ></script>
+  </body>
+</html>
